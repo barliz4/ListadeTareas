@@ -57,3 +57,15 @@ document.addEventListener("keydown", function(evento) {     //En la consola del 
     let nombre = localStorage.getItem('nombre');        //getItem se recupera
     console.log(nombre); // Muestra "Juan"
 
+    function cargarTareas() {
+        let listaTareas = JSON.parse(localStorage.getItem('tareas'));
+        console.log(listaTareas)
+        
+        for (let i=0; i<listaTareas.length;i ++) {
+            console.log(listaTareas[i])
+            const nuevaTarea = document.createElement ('li');
+            nuevaTarea.innerHTML = "<h1>" + listaTareas[i].tarea + "</h1> <>" + listaTareas[i].fecha + "</p>"
+            tareas.appendChild(nuevaTarea)
+
+        }
+    }
