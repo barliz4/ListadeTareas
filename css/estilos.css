@@ -1,0 +1,56 @@
+body {
+    background-color: rgba(255, 255, 255, 0.349);
+    margin-top: 89px;
+}
+
+#contenedor {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    background-color:   rgb(91, 202, 27);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    
+}
+
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 6px;
+    text-align: center;
+
+}
+
+button {
+    padding: 6px;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000; /* Borde inicial */
+    box-shadow: none; /* Sombra inicial */
+    transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(200, 204, 154, 0.932); /* Cambiar color de fondo al hacer hover */
+    border: 2px solid #000000f8; /* Cambiar color del borde al hacer hover */
+    box-shadow: 0 4px 8px rgba(32, 32, 17, 0.925); /* Añadir sombra al hacer hover */
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
