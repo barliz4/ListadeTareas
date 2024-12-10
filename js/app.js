@@ -19,6 +19,9 @@ if (edad >= 18) {
     alert("Bienvenido, este formulario es +18.");
 }
 
+let listaTareas = [];
+
+
 // Agregar un evento de clic
 boton.addEventListener("click", guardarTarea)
 
@@ -34,6 +37,9 @@ function guardarTarea () {
     const nuevaTarea = document.createElement ('li');
     nuevaTarea.innerHTML = "<h1>" + txtTarea + "</h1><p>" + txtFecha +  txtNumber + "</p>"
     tareas.appendChild(nuevaTarea)
+    let tareaGuardar = {"tarea":txtTarea, "fecha":txtFecha}
+    listaTareas.push(tareaGuardar)
+    localStorage.setItem('tareas', JSON.stringify(listaTareas));
 }
 
 document.addEventListener("keydown", function(evento) {     //En la consola del navegador se visualizan las teclas digitadas
