@@ -1,10 +1,23 @@
 const tarea = document.getElementById ("tarea")
 const fecha = document.getElementById ("fecha")
 const tareas = document.getElementById ("tareas")
-
-
 // Seleccionar un elemento
 let boton = document.getElementById("miBoton");
+
+//Cambiar el color al pasar el cursor por encima
+let contenedor = document.getElementById("contenedor");
+contenedor.addEventListener("mouseover", function() {
+    contenedor.style.backgroundColor = "black";
+});
+contenedor.addEventListener("mouseout", function() {
+    contenedor.style.backgroundColor = "green";
+});
+   
+
+let edad = 18;
+if (edad >= 18) {
+    alert("Bienvenido, este formulario es +18.");
+}
 
 // Agregar un evento de clic
 boton.addEventListener("click", guardarTarea)
@@ -21,5 +34,20 @@ function guardarTarea () {
     const nuevaTarea = document.createElement ('li');
     nuevaTarea.innerHTML = "<h1>" + txtTarea + "</h1><p>" + txtFecha +  txtNumber + "</p>"
     tareas.appendChild(nuevaTarea)
-
 }
+
+document.addEventListener("keydown", function(evento) {     //En la consola del navegador se visualizan las teclas digitadas
+    console.log("Tecla presionada: " + evento.key);
+
+    if(evento.key == "Enter"){              //Al presionar enter se guarda la información en el formulario
+        guardarTarea()  
+    }
+});
+
+    // Guardar un dato en la consola
+    localStorage.setItem('nombre', 'Juan');
+
+    // Recuperar un dato
+    let nombre = localStorage.getItem('nombre');        //getItem se recupera
+    console.log(nombre); // Muestra "Juan"
+

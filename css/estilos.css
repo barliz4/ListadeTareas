@@ -20,9 +20,17 @@ body {
 h1 {
     text-align: center;
     font-size: 40px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     color: rgb(245, 246, 247);
     
+
+    
+}
+
+/* Efecto al pasar el ratón */
+h1:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al hacer hover */
+    color: #7cf871; /* Cambiar el color del texto al hacer hover */
 }
 
 input {
@@ -44,9 +52,9 @@ button {
 }
 
 button:hover {
-    background-color: rgba(200, 204, 154, 0.932); /* Cambiar color de fondo al hacer hover */
+    background-color: rgba(84, 252, 84, 0.932); /* Cambiar color de fondo al hacer hover */
     border: 2px solid #000000f8; /* Cambiar color del borde al hacer hover */
-    box-shadow: 0 4px 8px rgba(32, 32, 17, 0.925); /* Añadir sombra al hacer hover */
+    box-shadow: 0 4px 8px rgba(19, 32, 17, 0.925); /* Añadir sombra al hacer hover */
 }
 
 p {
