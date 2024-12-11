@@ -1,5 +1,5 @@
-const nota1 = document.getElementById ("nota 1")
-const fecha = document.getElementById ("fecha")
+const nota11 = document.getElementById ("nota1")
+const fecha = document.getElementById ("nota2")
 const tareas = document.getElementById ("tareas")
 
 // Seleccionar un elemento
@@ -21,13 +21,16 @@ contenedor.addEventListener("mouseout", function() {
 //}
 
 let listaTareas = [];
+if(localStorage.getItem("Notas") !== null){
+    listaTareas = JSON.parse(localStorage.getItem("Notas"))
+}
 
 
 // Agregar un evento de clic
 boton.addEventListener("click", guardarTarea)
 
 function guardarTarea () {
-    let nota1 = nota1.value
+    let nota1 = nota11.value
     let txtFecha = fecha.value
     let txtNumber = number.value
 
@@ -59,14 +62,13 @@ document.addEventListener("keydown", function(evento) {     //En la consola del 
     //console.log(nombre); // Muestra "Juan"
 
     function cargarTareas() {
-        let listaNota1 = JSON.parse(localStorage.getItem('Nota 1'));
-        console.log(listaNota1)
+   
         
-        for (let i=0; i<listaNota1.length;i ++) {
-            console.log(listaNota1[i])
+        for (let i=0; i<listaTareas.length;i ++) {
+            console.log(listaTareas[i])
             const nuevaTarea = document.createElement ('li');
-            nuevaTarea.innerHTML = "<h1>" + listaNota1[i].tarea + "</h1> <>" + listaNota1[i].fecha + "</p>"
-            Nota1.appendChild(nuevaNota1)
+            nuevaTarea.innerHTML = "<h1>" + listaTareas[i].tarea + "</h1> <>" + listaTareas[i].fecha + "</p>"
+            nota1.appendChild(nuevaNota1)
 
         }
     }
