@@ -7,21 +7,45 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body onload="cargarTareas()">
+
+    <header class="header">
+
+        <div>
+            <img src="img\javascriptlogo.png" alt="" class="java">
+        </div>
+
+        <div>
+            <img src="img\phyton.png" alt="" class="phyton">
+        </div>
+
+        <div>
+            <img src="img\html.png" alt="" class="index">
+        </div>
+
+
+    <nav>
+        <ul class="nav-links">
+            <li> <a href="#"> JavaScript </a> </li>
+            <li> <a href="#"> Phyton </a> </li>
+            <li> <a href="#"> HTML </a> </li>
+        </ul>
+    </nav>
+</header>
+
+    <br> 
     
     <div id="contenedor">           <!-- EN CSS a los id, se les aplica estilos con un # -->
-        <h1> LISTA DE TAREAS  </h1>
-        <input type="name" id="name">
-        <input type="number" id="number">
-        <input type="text"  id="tarea">
-        <input type="date" id="fecha">
+        <h1> LISTA DE ESTUDIANTES  </h1>
+        <input type="name" id="name" placeholder="Ingrese el nombre del estudiante">
+        <input type="number" id="nota" name="nota" min="0" max="10" step="0.01" placeholder="Ingrese la nota 1 (0 a 10)" required>
+        <input type="number" id="nota" name="nota" min="0" max="10" step="0.01" placeholder="Ingrese la nota 2 (0 a 10)" required>
+        <input type="number" id="nota" name="nota" min="0" max="10" step="0.01" placeholder="Ingrese la nota 3 (0 a 10)" required>
+        <br>
         <button id="miBoton"> Guardar </button>
-        
     </div>
-   <div id="tareas"></div>
-
-
+   <div id="resultado"></div>
 
     <script src="js/app.js"></script>
 
 </body>
-</html>
+</html> 
