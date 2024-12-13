@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(255, 255, 255, 0.349);
+    background-color: rgb(255, 255, 255);
     margin-top: 0px;
 }
 
@@ -16,7 +16,6 @@ header {
 }
 
 .header {
-    
     margin-right: auto;
     display: flex;
 }
@@ -121,9 +120,100 @@ h1:hover {
     color: #010201; /* Cambiar el color del texto al hacer hover */
 }
 
+h2 {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+/* Efecto al pasar el ratón */
+h2:hover {
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
+    color: #1500ff; /* Cambiar el color del texto al hacer hover */
+    transition-duration: 0.4s;
+}
+
+h3 {
+    text-align: center;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#listahtml {
+    font-size: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    padding: 10px 160px; /* Espacio interno */
+    border-radius: 6px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgb(0, 0, 0); /* Añadimos sombra para darle profundidad */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    margin-top:     0px;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+#listahtml:hover {
+    transform: scale(0.9); /* Aumentar ligeramente el tamaño al hacer hover */
+    color: #000000;     /* color nobre del estudiante al pasar el cursor */ 
+    background-color: #bbbbbb;  /* color div al pasar el cursor */ 
+    box-shadow: 0 8px 15px rgb(4, 0, 255); /* Aumenta la sombra en hover */
+        cursor: pointer; /* cursor */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#listahtml {
+    animation: fadeIn 1s ease-out; /* Animación al cargar el elemento */
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff; /* Fondo donde se imprimen las notas */
+    padding: 7px 20px; /* Espacio interno para que el texto no quede pegado al borde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+    transition: all 0.3s ease; /* Transición txt */
+}
+
+p:hover {
+    color: #ffffff; /* Cambiar el color del texto al hacer hover */
+    background-color: #000000; /* Cambiar el color de fondo al hacer hover */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño del texto al hacer hover */
+    box-shadow: 0 8px 8px rgba(255, 255, 255, 0.947); /* Sombra más intensa al hacer hover */
+    cursor: pointer; /* Cambiar el cursor para indicar interactividad */
+    font-size: 30px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    animation: fadeIn 1s ease-out; /* Animación de entrada al cargar */
+}
+
+
+
+
 input {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 6px;
+    padding: 4px;
     text-align: center;
     font-style:italic;
     max-width: auto;
@@ -143,16 +233,13 @@ button {
 }
 
 button:hover {
-    background-color: rgba(51, 28, 225, 0.932); /* Cambiar color de fondo al hacer hover */
+    background-color: #6153fd; /* Cambiar color de fondo al hacer hover */
     border: 2px solid #000000f8; /* Cambiar color del borde al hacer hover */
     box-shadow: 0 4px 8px rgba(19, 32, 17, 0.925); /* Añadir sombra al hacer hover */
 }
 
-p {
-    text-align: left;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-    color: rgb(245, 246, 247);
-}
+ul {
+    list-style-type: none; /* Elimina las viñetas */
 
+
+}

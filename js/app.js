@@ -42,7 +42,7 @@ function guardarTarea () {
 
 
     const nuevaNota1 = document.createElement ('li');
-    nuevaNota1.innerHTML = "<h3>" + vnombre + "</h3>" + "<p>" + vnota1 +  vnota2 + vnota3 + "</p>"
+    nuevaNota1.innerHTML = "<h3>" + vnombre + "</h3>" + "<p>" + vnota1 + "</p>" + "<p>" + vnota2 + "</p>" +  "<p>" + vnota3 + "</p>"
     listahtml.appendChild(nuevaNota1)
     let tareaGuardar = {"nombre":vnombre, "nota1":vnota1 , "nota2":vnota2 , "nota3":vnota3}
     listaTareas.push(tareaGuardar)
