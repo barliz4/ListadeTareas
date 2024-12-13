@@ -1,6 +1,8 @@
-const nota11 = document.getElementById ("nota1")
-const fecha = document.getElementById ("nota2")
-const tareas = document.getElementById ("tareas")
+const nota1 = document.getElementById ("nota1")
+const nota2 = document.getElementById ("nota2")
+const nota3 = document.getElementById ("nota3")
+const nombre = document.getElementById ("nombre")
+const listahtml = document.getElementById("listahtml")
 
 // Seleccionar un elemento
 let boton = document.getElementById("miBoton");
@@ -30,20 +32,21 @@ if(localStorage.getItem("Notas") !== null){
 boton.addEventListener("click", guardarTarea)
 
 function guardarTarea () {
-    let nota1 = nota11.value
-    let txtFecha = fecha.value
-    let txtNumber = number.value
+    let vnota1 = nota1.value
+    let vnota2 = nota2.value
+    let vnota3 = nota3.value
+    let vnombre = nombre.value
 
-    //console.log(txtFecha)               //Se captura la información, se verifica en la consola del navegador
-    //console.log(txtTarea)
+    console.log(vnota1)               //Se captura la información, se verifica en la consola del navegador
+    console.log(vnota2)
 
 
     const nuevaNota1 = document.createElement ('li');
-    nuevaNota1.innerHTML = "<h1>" + txtNota1 + "</h1><p>" + txtFecha +  txtNumber + "</p>"
-    tareas.appendChild(nuevaNota1)
-    let tareaGuardar = {"tarea":txtNota1, "fecha":txtFecha}
-    listaTareas.push(nota1Guardar)
-    localStorage.setItem('Notas', JSON.stringify(listaNota1));
+    nuevaNota1.innerHTML = "<h3>" + vnombre + "</h3>" + "<p>" + vnota1 +  vnota2 + vnota3 + "</p>"
+    listahtml.appendChild(nuevaNota1)
+    let tareaGuardar = {"nombre":vnombre, "nota1":vnota1 , "nota2":vnota2 , "nota3":vnota3}
+    listaTareas.push(tareaGuardar)
+    localStorage.setItem('Notas', JSON.stringify(listaTareas));
 }
 
 document.addEventListener("keydown", function(evento) {     //En la consola del navegador se visualizan las teclas digitadas
@@ -62,13 +65,11 @@ document.addEventListener("keydown", function(evento) {     //En la consola del 
     //console.log(nombre); // Muestra "Juan"
 
     function cargarTareas() {
-   
-        
         for (let i=0; i<listaTareas.length;i ++) {
             console.log(listaTareas[i])
             const nuevaTarea = document.createElement ('li');
-            nuevaTarea.innerHTML = "<h1>" + listaTareas[i].tarea + "</h1> <>" + listaTareas[i].fecha + "</p>"
-            nota1.appendChild(nuevaNota1)
+            nuevaTarea.innerHTML = "<h3>" + listaTareas[i].nombre + "</h3>" + listaTareas[i].nota2 + "</p>"
+            listahtml.appendChild(nuevaTarea)
 
         }
     }
